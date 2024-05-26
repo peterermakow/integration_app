@@ -9,24 +9,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.ermakow</groupId>
-    <artifactId>product_core</artifactId>
+    <artifactId>payment_core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>product_core</name>
-    <description>product_core</description>
+    <name>payment_core</name>
+    <description>payment_core</description>
     <properties>
         <java.version>17</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -36,12 +31,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <!--позже убрать когда перейдем на JPA-->
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-            <version>5.1.0</version>
         </dependency>
         <dependency>
             <groupId>ru.ermakow</groupId>
