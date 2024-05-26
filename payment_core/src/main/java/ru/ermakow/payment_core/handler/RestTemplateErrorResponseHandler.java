@@ -3,11 +3,13 @@ package ru.ermakow.payment_core.handler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.ResponseErrorHandler;
 import ru.ermakow.dto.response.ErrorResponse;
 
 import java.io.IOException;
 
+@Component
 public class RestTemplateErrorResponseHandler implements ResponseErrorHandler {
 
     @Override
