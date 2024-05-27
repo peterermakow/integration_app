@@ -1,10 +1,10 @@
-package ru.ermakow.payment_core.exception;
+package ru.ermakow.payment_core.aop;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ru.ermakow.payment_core.dto.ErrorResponse;
+import ru.ermakow.dto.response.ErrorResponse;
 
 @RestControllerAdvice
 public class GlobalControllerAdvice {

@@ -7,6 +7,6 @@ public class UriConstants {
 
     public static final String USER_PATH = "/user";
 
-    public static final String PRODUCT_PATH = "/product";
+    public static final String PAYMENT_PATH = "/payment";
 
 }
