@@ -1,12 +1,12 @@
-package ru.ermakow.product_core;
+package ru.ermakow.payment_core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import ru.ermakow.product_core.config.ApplicationProperties;
+import ru.ermakow.payment_core.config.properties.ExecutorsProperties;
 
 @SpringBootApplication
-@EnableConfigurationProperties({ApplicationProperties.class})
+@EnableConfigurationProperties({ExecutorsProperties.class})
 public class Application {
 
     public static void main(String[] args) {

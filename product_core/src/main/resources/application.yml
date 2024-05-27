@@ -1,1 +1,13 @@
-spring.application.name=product_core
+spring:
+  application:
+    name: product_core
+
+server:
+  port : 8081
+
+products:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/product_db
+    username: postgres
+    password: postgres
+
