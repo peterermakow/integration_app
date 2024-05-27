@@ -9,11 +9,10 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import ru.ermakow.dto.request.ProductTypeBalanceRequest;
-import ru.ermakow.payment_core.dto.ProductResponseDto;
+import ru.ermakow.dto.request.PaymentRequest;
+import ru.ermakow.dto.response.ProductResponseDto;
 import ru.ermakow.payment_core.config.properties.ExecutorsProperties;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 @Slf4j
@@ -37,12 +36,12 @@ public class ProductsIntegrationService {
     }
 
     /**
-     * в случсае успешнрого платежа метод вернет ProductResponseDto с обновленным балансом клиента, в противном случае 422/423 с описанием ошибки(нет продукта или же недостаточно купилок)
+     * в случсае успешного платежа метод вернет ProductResponseDto с обновленным балансом клиента, в противном случае 422/423 с описанием ошибки(нет продукта или же недостаточно купилок)
      */
-    public ProductResponseDto executePayment(String type, Long id, BigDecimal payment) {
+    public ProductResponseDto executePayment(PaymentRequest request) {
         return restTemplate.postForObject(
-                "/product",
-                new ProductTypeBalanceRequest(String.valueOf(id), type, payment),
+                "/payment",
+                request,
                 ProductResponseDto.class
         );
     }

@@ -1,4 +1,4 @@
-package ru.ermakow.payment_core.dto;
+package ru.ermakow.dto.response;
 
 public record ErrorResponse(String message) {
 }

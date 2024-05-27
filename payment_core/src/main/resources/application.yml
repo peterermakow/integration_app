@@ -9,6 +9,6 @@ integrations:
   products:
     client:
       rest-template-properties:
-        url: "http://127.0.01:8081"
+        url: "http://localhost:8081"
         connect-timeout: 1s
         read-timeout: 3s

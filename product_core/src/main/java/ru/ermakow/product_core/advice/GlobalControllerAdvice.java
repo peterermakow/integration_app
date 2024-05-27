@@ -1,10 +1,12 @@
-package ru.ermakow.product_core.exception;
+package ru.ermakow.product_core.advice;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import ru.ermakow.dto.response.ErrorResponse;
+import ru.ermakow.product_core.exception.InsufficientBalanceException;
+import ru.ermakow.product_core.exception.UnprocessableEntityException;
 
 @RestControllerAdvice
 public class GlobalControllerAdvice {
@@ -15,9 +17,9 @@ public class GlobalControllerAdvice {
         return new ErrorResponse(e.getMessage());
     }
 
-    @ExceptionHandler(InsufficientAccountBalanceException.class)
+    @ExceptionHandler(InsufficientBalanceException.class)
     @ResponseStatus(HttpStatus.LOCKED)
-    public ErrorResponse handleInsufficientAccountBalanceException(InsufficientAccountBalanceException e) {
+    public ErrorResponse handleInsufficientAccountBalanceException(InsufficientBalanceException e) {
         return new ErrorResponse(e.getMessage());
     }
 }

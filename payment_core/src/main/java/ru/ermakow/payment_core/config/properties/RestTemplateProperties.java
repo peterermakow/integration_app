@@ -8,6 +8,8 @@ import java.time.Duration;
 public class RestTemplateProperties {
 
     private String url;
+
     private Duration connectTimeout;
+
     private Duration readTimeout;
 }

@@ -1,4 +1,4 @@
-package ru.ermakow.product_core.dto;
+package ru.ermakow.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductDto {
+public class ProductResponseDto {
 
     private String userId;
     private String accountNumber;

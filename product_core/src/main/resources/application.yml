@@ -1,13 +1,21 @@
 spring:
   application:
     name: product_core
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/product_db
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    open-in-view: false
+    generate-ddl: false
 
 server:
   port : 8081
 
-products:
-  datasource:
-    jdbc-url: jdbc:postgresql://localhost:5432/product_db
-    username: postgres
-    password: postgres
 
